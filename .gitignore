@@ -38,3 +38,9 @@ logs/*.json
 *.md
 !README.md
 !examples/*.md
+
+# Ignored folder
+ignored/
+
+# Claude Code
+.claude/
