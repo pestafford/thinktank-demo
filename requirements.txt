@@ -1,0 +1,10 @@
+# ThinkTank Security Analysis Demo - Dependencies
+
+# Core LLM API
+anthropic>=0.39.0
+
+# Standard library dependencies (included with Python 3.8+)
+# No additional packages required for core functionality
+
+# Optional: For enhanced features (uncomment if needed)
+# python-dotenv>=1.0.0  # For .env file support

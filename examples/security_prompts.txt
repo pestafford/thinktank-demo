@@ -1,0 +1,153 @@
+# ThinkTank Security Analysis - Example Prompts
+
+## Authentication & Authorization
+
+1. Analyze the security implications of implementing passwordless authentication using WebAuthn for a financial services application.
+
+2. What are the security trade-offs between session-based authentication and JWT tokens for a mobile banking app?
+
+3. Evaluate the security of implementing OAuth 2.0 with PKCE for a single-page application (SPA).
+
+4. Should we use Role-Based Access Control (RBAC) or Attribute-Based Access Control (ABAC) for a healthcare system handling patient records?
+
+5. Analyze the security risks of implementing biometric authentication with fallback to SMS-based 2FA.
+
+
+## API Security
+
+6. What are the key security risks in deploying a GraphQL API for a social media platform, and how do they differ from REST API risks?
+
+7. Evaluate the security architecture of a microservices-based API gateway that handles authentication and rate limiting.
+
+8. Analyze the security implications of implementing API versioning with backward compatibility for a payment processing service.
+
+9. What security measures should be implemented for a public API that provides AI-generated content?
+
+10. Assess the risks of exposing internal microservices through a single API gateway versus direct service-to-service communication.
+
+
+## AI & ML Security
+
+11. What are the key security risks in deploying AI agents with Model Context Protocol (MCP) tools in an enterprise environment?
+
+12. Analyze the security implications of using large language models (LLMs) to process user-provided documents.
+
+13. How can we prevent prompt injection attacks in a customer service chatbot that has access to internal knowledge bases?
+
+14. Evaluate the security risks of fine-tuning open-source LLMs on proprietary company data.
+
+15. What security controls should be implemented for an AI system that can execute code based on natural language instructions?
+
+
+## Cloud & Infrastructure
+
+16. Compare the security posture of serverless functions (AWS Lambda) versus containerized applications (Kubernetes) for a fintech startup.
+
+17. Analyze the security implications of implementing a zero-trust network architecture for a distributed workforce.
+
+18. What are the key security considerations for migrating from on-premise infrastructure to a multi-cloud environment?
+
+19. Evaluate the security of using service mesh (Istio) for microservices communication in a healthcare application.
+
+20. Assess the risks and benefits of implementing GitOps for infrastructure deployment in a regulated industry.
+
+
+## Data Privacy & Compliance
+
+21. What security measures are required to achieve SOC 2 Type II compliance for a SaaS platform handling customer data?
+
+22. Analyze the security and privacy implications of implementing end-to-end encryption for a messaging application.
+
+23. How should we architect data residency requirements for GDPR compliance in a globally distributed application?
+
+24. Evaluate the security of using client-side encryption for sensitive data in a cloud storage application.
+
+25. What are the key security considerations for implementing a data lake that contains both sensitive and non-sensitive data?
+
+
+## Supply Chain Security
+
+26. Analyze the security risks in our software supply chain, particularly regarding third-party npm packages in our React application.
+
+27. What security controls should be implemented for a CI/CD pipeline that deploys to production multiple times per day?
+
+28. Evaluate the security implications of using container images from public registries versus maintaining private registries.
+
+29. How can we detect and prevent dependency confusion attacks in our Python package management?
+
+30. Assess the security of implementing software bill of materials (SBOM) for vulnerability tracking across our application stack.
+
+
+## Incident Response & Monitoring
+
+31. What security monitoring and alerting should be implemented to detect lateral movement in a cloud environment?
+
+32. Analyze the effectiveness of implementing Security Information and Event Management (SIEM) versus Security Orchestration, Automation and Response (SOAR) for a mid-sized company.
+
+33. How should we design an incident response plan for a ransomware attack on our Kubernetes infrastructure?
+
+34. Evaluate the security of implementing runtime application self-protection (RASP) in our production environment.
+
+35. What are the key security metrics and KPIs we should track to measure our security posture improvement over time?
+
+
+## Web Application Security
+
+36. Analyze the security implications of implementing Content Security Policy (CSP) with strict-dynamic for a single-page application.
+
+37. What security measures should be implemented to prevent Server-Side Request Forgery (SSRF) in a web application that fetches external content?
+
+38. Evaluate the security of using WebAssembly for performance-critical operations in a browser-based application.
+
+39. How can we prevent Cross-Site Scripting (XSS) attacks in a rich text editor that allows user-generated HTML content?
+
+40. Assess the security risks of implementing client-side routing with sensitive data in URL parameters.
+
+
+## Mobile Security
+
+41. What are the key security considerations for implementing certificate pinning in a mobile banking application?
+
+42. Analyze the security trade-offs between storing sensitive data in iOS Keychain versus Android Keystore.
+
+43. How can we prevent man-in-the-middle attacks for a mobile app that communicates with our API over public Wi-Fi?
+
+44. Evaluate the security of using React Native versus native development for a healthcare mobile application.
+
+45. What security measures should be implemented to detect and respond to jailbroken/rooted devices accessing our mobile app?
+
+
+## Blockchain & Cryptocurrency
+
+46. Analyze the security implications of implementing a smart contract for decentralized finance (DeFi) applications.
+
+47. What security controls should be implemented for a cryptocurrency wallet application?
+
+48. Evaluate the security of using blockchain for supply chain tracking and provenance verification.
+
+49. How can we prevent reentrancy attacks in Ethereum smart contracts handling financial transactions?
+
+50. Assess the security and compliance implications of implementing a central bank digital currency (CBDC) platform.
+
+
+---
+
+## How to Use These Prompts
+
+1. **Quick Demo**: Use prompts 1, 11, or 7 for compelling live demonstrations
+
+2. **Domain-Specific**: Choose prompts relevant to your audience's industry
+   - Financial: 1, 2, 16, 41
+   - Healthcare: 4, 19, 24
+   - Tech Companies: 26, 27, 28, 32
+
+3. **Complexity Levels**:
+   - Beginner-friendly: 1, 6, 21
+   - Intermediate: 11, 17, 27
+   - Advanced: 29, 32, 46
+
+4. **Presentation Tips**:
+   - Start with a familiar, relatable scenario
+   - Use verbose mode (`--verbose`) to show agent thinking
+   - Save output to file (`-o report.md`) for later discussion
+   - Compare single-phase vs multi-phase for the same prompt

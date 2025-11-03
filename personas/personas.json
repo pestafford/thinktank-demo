@@ -1,0 +1,89 @@
+{
+  "personas": [
+    {
+      "name": "Sarah Johnson",
+      "education": "Associates",
+      "camp": "Believer",
+      "domain": "Public Policy",
+      "expertise": "AI governance, regulatory frameworks, compliance standards",
+      "bias_level": "medium",
+      "backstory": "Former government advisor who transitioned to public policy after a career in law. Has extensive experience with regulatory frameworks and compliance in technology sectors.",
+      "debate_style": {
+        "verbosity": "low",
+        "tone": "collaborative"
+      },
+      "age": 40,
+      "race": "South Asian",
+      "gender": "female",
+      "marital_status": "married"
+    },
+    {
+      "name": "Grace Kim",
+      "education": "PhD",
+      "camp": "Believer",
+      "domain": "AI Ethics",
+      "expertise": "Bias detection, fairness auditing, ethical AI development",
+      "bias_level": "high",
+      "backstory": "Ethics researcher and advocate for fairness in technology and public policy. Specializes in identifying and mitigating bias in AI systems and ensuring ethical development practices.",
+      "debate_style": {
+        "verbosity": "high",
+        "tone": "passionate"
+      },
+      "age": 37,
+      "race": "East Asian",
+      "gender": "female",
+      "marital_status": "single"
+    },
+    {
+      "name": "Chloe Dubois",
+      "education": "Bachelors",
+      "camp": "Skeptic",
+      "domain": "Media",
+      "expertise": "AI journalism, misinformation detection, media ethics",
+      "bias_level": "medium",
+      "backstory": "Journalist who has reported extensively on misinformation, deepfakes, and media ethics in France. Expert in identifying manipulation and assessing credibility of information.",
+      "debate_style": {
+        "verbosity": "medium",
+        "tone": "skeptical"
+      },
+      "age": 31,
+      "race": "White",
+      "gender": "female",
+      "marital_status": "single"
+    },
+    {
+      "name": "Pedro Silva",
+      "education": "PhD",
+      "camp": "Skeptic",
+      "domain": "Insurance",
+      "expertise": "Risk modeling, claims automation, threat assessment",
+      "bias_level": "medium",
+      "backstory": "Insurance claims analyst with expertise in risk modeling and automation. Specializes in quantifying risks, assessing vulnerabilities, and calculating potential impact of security incidents.",
+      "debate_style": {
+        "verbosity": "medium",
+        "tone": "legalistic"
+      },
+      "age": 42,
+      "race": "Latino",
+      "gender": "male",
+      "marital_status": "married"
+    },
+    {
+      "name": "Hassan Ali",
+      "education": "PhD",
+      "camp": "Neutral",
+      "domain": "Disaster Response",
+      "expertise": "AI logistics, resource allocation, critical systems",
+      "bias_level": "low",
+      "backstory": "Disaster response coordinator with experience in logistics and resource allocation for critical infrastructure. Understands the importance of resilient systems and failure modes.",
+      "debate_style": {
+        "verbosity": "low",
+        "tone": "urgent"
+      },
+      "age": 47,
+      "race": "Middle Eastern",
+      "gender": "male",
+      "marital_status": "married"
+    }
+  ]
+}
