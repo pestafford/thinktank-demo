@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 ThinkTank Security Analysis Demo
 Self-contained demonstration of multi-agent swarm architecture
@@ -7,6 +8,10 @@ Self-contained demonstration of multi-agent swarm architecture
 import sys
 import argparse
 from pathlib import Path
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # Add lib to path
 sys.path.insert(0, str(Path(__file__).parent))
@@ -29,12 +34,12 @@ def print_header():
     """Print demo header"""
     print("\n" + "="*70)
     print(" " * 15 + "ThinkTank Security Analysis Demo")
-    print(" " * 10 + "Multi-Agent Swarm Architecture (PADS)")
+    print(" " * 10 + "Multi-Agent PERSONA Architecture")
     print("="*70)
     print("\nConfiguration:")
     print("  • Agents: 2 Believers + 2 Skeptics + 1 Neutral + 1 Foreperson")
     print("  • Extension: MCP Security (auto-activates on security keywords)")
-    print("  • Execution: Parallel (sub-10-second analysis)")
+    print("  • Execution: Parallel multi-phase deliberation (agents respond to each other)")
     print("="*70 + "\n")
 
 
@@ -66,7 +71,7 @@ def get_user_prompt():
         return EXAMPLE_PROMPTS[0]
 
 
-def run_demo(prompt, verbose=False, output_file=None, use_extensions=True, multi_phase=False):
+def run_demo(prompt, verbose=False, output_file=None, use_extensions=True, multi_phase=True):
     """
     Run the ThinkTank demo.
 
@@ -75,7 +80,7 @@ def run_demo(prompt, verbose=False, output_file=None, use_extensions=True, multi
         verbose: Show detailed progress
         output_file: Save report to file
         use_extensions: Enable extension system
-        multi_phase: Run multi-phase deliberation
+        multi_phase: Run multi-phase deliberation (default: True)
     """
     # Load personas
     print("\n[1/4] Loading agent personas...")
@@ -145,7 +150,7 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  # Interactive mode with prompt selection
+  # Interactive mode with prompt selection (default: multi-phase deliberation)
   python demo.py
 
   # Custom prompt
@@ -154,8 +159,8 @@ Examples:
   # Verbose mode (show agent thinking)
   python demo.py --verbose
 
-  # Multi-phase deliberation (3 rounds)
-  python demo.py --multi
+  # Single-phase deliberation (faster, no agent interaction)
+  python demo.py --single-phase
 
   # Save report to file
   python demo.py --output report.md
@@ -190,9 +195,9 @@ Examples:
     )
 
     parser.add_argument(
-        "--multi",
+        "--single-phase",
         action="store_true",
-        help="Run multi-phase deliberation (3 rounds)"
+        help="Run single-phase deliberation (faster, agents don't respond to each other)"
     )
 
     parser.add_argument(
@@ -224,7 +229,7 @@ Examples:
             verbose=args.verbose,
             output_file=args.output,
             use_extensions=not args.no_extension,
-            multi_phase=args.multi
+            multi_phase=not args.single_phase
         )
 
     except KeyboardInterrupt:

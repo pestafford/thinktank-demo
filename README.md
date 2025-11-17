@@ -4,7 +4,11 @@ A self-contained demonstration of ThinkTank's multi-agent swarm architecture app
 
 ## Overview
 
-This demo showcases ThinkTank's Persona-Attributed Deliberative Swarm (PADS) architecture:
+This demo showcases ThinkTank's **PERSONA** architecture:
+
+**PERSONA**: **P**ersona-**E**nhanced **R**easoning through **S**tructured **O**ntological **N**atural **A**rgumentation
+
+Key features:
 - **5 Diverse Agents**: 2 Believers, 2 Skeptics, 1 Neutral perspective
 - **Security Extension**: Specialized MCP Security domain expertise
 - **Foreperson Synthesis**: Consensus reporting from multi-perspective debate
@@ -27,7 +31,7 @@ This demo showcases ThinkTank's Persona-Attributed Deliberative Swarm (PADS) arc
                        │
                        ↓
         ┌──────────────────────────────┐
-        │    Persona-Attributed Swarm  │
+        │    PERSONA Architecture      │
         │                              │
         │  ┌─────────┐  ┌─────────┐  │
         │  │Believer │  │Believer │  │
@@ -74,19 +78,106 @@ This demo showcases ThinkTank's Persona-Attributed Deliberative Swarm (PADS) arc
 ### Installation
 
 ```bash
-# 1. Navigate to demo folder
-cd demo
+# 1. Clone the repository
+git clone <repository-url>
+cd thinktank-demo
 
-# 2. Install dependencies
+# 2. Create virtual environment
+python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# 3. Install dependencies
 pip install -r requirements.txt
 
-# 3. Configure API key
+# 4. Configure API key
 cp .env.example .env
 # Edit .env and add your CLAUDE_API_KEY
 
-# 4. Run demo
+# 5. Run basic demo
 python demo.py
 ```
+
+## MCP Security Demo (Confidence-Based Security Assessment)
+
+**🎯 The Main Demo**: This showcases ThinkTank's core capability - turning raw security scan data into actionable deployment decisions through multi-agent deliberation.
+
+### What Makes This Demo Unique
+
+Traditional security scanners output lists of vulnerabilities. ThinkTank analyzes those lists and answers: **"Should we deploy this?"**
+
+**The Process:**
+1. **Automated Scanning** - Multiple security tools analyze the MCP fetch server
+2. **Multi-Agent Deliberation** - ThinkTank agents debate exploitability, context, and risk
+3. **Confidence Score** - Agents produce a 0-100% confidence score
+4. **Automated Decision** - System automatically tags based on confidence:
+   - **>75%**: `SECURE` → Auto-approve deployment ✅
+   - **50-75%**: `HUMAN_REVIEW_REQUIRED` → Alert security team ⚠️
+   - **<50%**: `INSECURE` → Block deployment ❌
+
+### Additional Prerequisites for MCP Demo
+```bash
+# Install security scanning tools (macOS)
+brew install semgrep      # SAST - Static Application Security Testing
+brew install syft         # SBOM generation
+brew install trivy        # CVE scanning
+brew install gitleaks     # Secrets detection
+brew install jq           # JSON processing
+
+# Verify installations
+semgrep --version
+syft version
+trivy --version
+gitleaks version
+jq --version
+```
+
+### Running the MCP Security Demo
+
+```bash
+# Make sure you're in the thinktank-demo directory
+cd thinktank-demo
+
+# Run the complete demo pipeline
+./run_mcp_security_demo.sh
+```
+
+**What happens:**
+1. ✅ Clones official MCP servers repository
+2. ✅ Runs comprehensive security scans (SAST, SBOM, CVE, Secrets)
+3. ✅ Consolidates findings into unified report
+4. ✅ **Automatically runs ThinkTank multi-agent analysis**
+5. ✅ **Extracts confidence score and applies security tag**
+6. ✅ Generates deployment recommendation
+
+**Output files:** (All in project directory)
+- `mcp-demo/security-reports/consolidated-security-report.json` - Raw scan data
+- `mcp-demo/security-reports/executive-summary.txt` - Quick overview
+- `ignored/security_report_swarm_analysis.md` - **ThinkTank consensus with security tag**
+- `ignored/security_report_swarm_analysis.json` - **Structured results with confidence score**
+
+**For video recording:**
+```bash
+# Enable recording mode for automatic pauses between steps
+export RECORDING_MODE=1
+./run_mcp_security_demo.sh
+```
+
+### Demo Highlights
+
+**Terminal Output Shows:**
+- 🔍 Real-time security scanning progress
+- 📊 Vulnerability counts by severity
+- 🤖 Multi-agent debate in progress
+- 📈 Individual agent confidence scores
+- 🎯 **Final confidence-based security tag (color-coded)**
+- ✅/⚠️/❌ **Deployment decision**
+
+**Key Demo Points:**
+- Agents debate whether SSRF risks are acceptable in MCP's context
+- Conservative vs. pragmatic perspectives emerge
+- Context matters: theoretical vulnerabilities vs. practical exploitability
+- Human expertise encoded in agent personas
+- Transparent reasoning: see the debate, not just the conclusion
 
 ## Usage
 
@@ -309,5 +400,5 @@ For questions or feedback about this demo:
 
 ---
 
-**Built with ThinkTank PADS Architecture**
+**Built with ThinkTank PERSONA Architecture**
 *Bringing diverse perspectives to AI decision-making*

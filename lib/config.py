@@ -18,8 +18,8 @@ SWARM_SIZE = {
 }
 
 # Token Limits
-AGENT_MAX_TOKENS = 256      # Response length for regular agents
-FOREPERSON_MAX_TOKENS = 512 # Longer report for synthesis
+AGENT_MAX_TOKENS = 2048      # Response length for regular agents (increased for high-quality responses)
+FOREPERSON_MAX_TOKENS = 4096 # Longer report for synthesis (increased for complete analysis)
 
 # Performance Settings
 PARALLEL_EXECUTION = True    # Enable parallel agent execution

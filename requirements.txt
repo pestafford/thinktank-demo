@@ -1,10 +1,43 @@
 # ThinkTank Security Analysis Demo - Dependencies
 
-# Core LLM API
+# ============================================================================
+# CORE REQUIREMENTS (Required for main demo)
+# ============================================================================
+
+# Claude API client
 anthropic>=0.39.0
 
-# Standard library dependencies (included with Python 3.8+)
-# No additional packages required for core functionality
+# Environment variable management (.env file support)
+python-dotenv>=1.0.0
 
-# Optional: For enhanced features (uncomment if needed)
-# python-dotenv>=1.0.0  # For .env file support
+# ============================================================================
+# EVALUATION FRAMEWORK REQUIREMENTS (Optional - only for evaluation scripts)
+# ============================================================================
+
+# DeepEval framework (for evaluate_deepeval*.py scripts)
+deepeval>=1.0.0
+
+# RAGAS framework (for evaluate_ragas*.py scripts)
+ragas>=0.1.0
+
+# OpenAI API (required by some evaluation frameworks)
+openai>=1.0.0
+
+# ============================================================================
+# INSTALLATION INSTRUCTIONS
+# ============================================================================
+
+# For basic demo only:
+#   pip install anthropic python-dotenv
+
+# For full installation with evaluation tools:
+#   pip install -r requirements.txt
+
+# ============================================================================
+# NOTES
+# ============================================================================
+# - anthropic: Required for Claude API access
+# - python-dotenv: Required for loading CLAUDE_API_KEY from .env file
+# - deepeval: Only needed if running evaluate_deepeval*.py scripts
+# - ragas: Only needed if running evaluate_ragas*.py scripts
+# - openai: May be required by evaluation frameworks for their own models

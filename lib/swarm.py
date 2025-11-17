@@ -179,6 +179,15 @@ class Swarm:
 
             if self.verbose:
                 print(f"[{label}] Complete")
+                # Show a preview of the response for demo visibility
+                print(f"\n{'─'*60}")
+                print(f"{label}'s Perspective:")
+                print(f"{'─'*60}")
+                preview = response[:500] if len(response) > 500 else response
+                print(preview)
+                if len(response) > 500:
+                    print("\n[... continued ...]")
+                print(f"{'─'*60}\n")
 
             return (label, response)
 
@@ -235,7 +244,15 @@ class Swarm:
         )
 
         if self.verbose:
-            print(f"[Foreperson] Complete\n")
+            print(f"[Foreperson] Complete")
+            print(f"\n{'='*60}")
+            print("FOREPERSON CONSENSUS:")
+            print(f"{'='*60}")
+            preview = consensus[:800] if len(consensus) > 800 else consensus
+            print(preview)
+            if len(consensus) > 800:
+                print("\n[... full report below ...]")
+            print(f"{'='*60}\n")
 
         return consensus
 

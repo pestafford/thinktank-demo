@@ -15,6 +15,7 @@ build/
 
 # Virtual environments
 venv/
+venv-*/
 env/
 ENV/
 
@@ -37,10 +38,21 @@ logs/*.json
 # Output files
 *.md
 !README.md
+!MANIFEST.md
+!QUICKSTART.md
 !examples/*.md
 
 # Ignored folder
 ignored/
+
+# Presentation materials
+presentation/
+
+# MCP Security Demo outputs
+mcp-demo/
+
+# Other demos (separate git repos)
+monitoring_llms_demo/
 
 # Claude Code
 .claude/
