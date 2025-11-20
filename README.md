@@ -22,30 +22,40 @@ Key features:
 │         "Analyze security of X system"               │
 └──────────────────────┬──────────────────────────────┘
                        │
+        ┌──────────────────────────────┐
+        |   PERSONA layer              |
+        |    - gives agents custom     |
+        |           perspectives       |
+        |    - at instantiation        |
+        └──────────────┬───────────────┘
+                       │
                        ↓
         ┌──────────────────────────────┐
-        │  Extension System (Optional)  │
+        │  Extension System (Optional) │
+        |  - ensures agents have       |
+        |         similar technical    |
+        |         focus                |
         │  - MCP Security Extension    │
         │  - Auto-activates on keywords│
         └──────────────┬───────────────┘
                        │
                        ↓
         ┌──────────────────────────────┐
-        │    PERSONA Architecture      │
+        │       Debate Swarm           │
+        │       Architecture           │
+        │  ┌─────────┐  ┌─────────┐    │
+        │  │Believer │  │Believer │    │
+        │  │Agent 1  │  │Agent 2  │    │
+        │  └─────────┘  └─────────┘    │
         │                              │
-        │  ┌─────────┐  ┌─────────┐  │
-        │  │Believer │  │Believer │  │
-        │  │Agent 1  │  │Agent 2  │  │
-        │  └─────────┘  └─────────┘  │
+        │  ┌─────────┐  ┌─────────┐    │
+        │  │Skeptic  │  │Skeptic  │    │
+        │  │Agent 1  │  │Agent 2  │    │
+        │  └─────────┘  └─────────┘    │
         │                              │
-        │  ┌─────────┐  ┌─────────┐  │
-        │  │Skeptic  │  │Skeptic  │  │
-        │  │Agent 1  │  │Agent 2  │  │
-        │  └─────────┘  └─────────┘  │
-        │                              │
-        │  ┌─────────────────────┐    │
-        │  │  Neutral Observer   │    │
-        │  └─────────────────────┘    │
+        │  ┌─────────────────────┐     │
+        │  │        Neutral      │     │
+        │  └─────────────────────┘     │
         │                              │
         │  (Parallel Execution)        │
         └──────────────┬───────────────┘
