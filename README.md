@@ -2,6 +2,8 @@
 
 A self-contained demonstration of ThinkTank's multi-agent swarm architecture applied to security analysis.
 
+As presented at [MLOps Agents In Production](https://www.youtube.com/watch?v=blOifXIJLe4) (Youtube Link):
+
 ## Overview
 
 This demo showcases ThinkTank's **PERSONA** architecture:
